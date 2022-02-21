@@ -301,7 +301,7 @@ class FormattedError
      *
      * @return callable|callable
      */
-    public static function prepareFormatter(?callable $formatter = null, $debug)
+    public static function prepareFormatter(?callable $formatter, $debug)
     {
         $formatter = $formatter ?: static function ($e) {
             return FormattedError::createFromException($e);
